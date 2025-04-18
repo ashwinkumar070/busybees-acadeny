@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BusyBees Academy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fff8e1, #ffe082);
+      color: #333;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: linear-gradient(135deg, #fff3e0, #ffe0b2); /* Soft peachy gradient */
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+      text-align: center;
+      color: white; /* Soft brown for better contrast */
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      animation: slideDown 1s ease-out;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      transition: color 0.5s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #bf360c;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .info, .subjects, .about {
+      margin-bottom: 50px;
+      background: #fff3e0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .highlight {
+      color: #e65100; /* A deeper orange for highlights */
+      font-weight: bold;
+    }
+
+    .subject-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .subject {
+      background-color: #fff3e0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    .subject h3 {
+      color: #bf360c;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .subject ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .subject ul li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .social {
+      text-align: center;
+      margin: 30px 0;
+      background: #fff176;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      text-align: center;
+      font-size: 1.2rem;
+      border-radius: 20px;
+      text-decoration: none;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-button.instagram {
+      background-color: #e1306c;
+    }
+
+    .contact-button:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background-color: #212121;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    .reviews {
+      background: #fff3e0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      margin-bottom: 50px;
+    }
+
+    .review-item {
+      margin-bottom: 20px;
+    }
+
+    .review-item p {
+      font-style: italic;
+      margin: 0;
+    }
+
+    .review-item span {
+      display: block;
+      text-align: right;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .coming-soon {
+      background: #ffe082;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .coming-soon h2 {
+      color: #bf360c;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #5d4037;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BusyBees Tuition Center</h1>
+    <p>📍 Poonga Nagar, Arasur, Coimbatore, Tamil Nadu</p>
+  </header>
+
+  <section class="about">
+    <h2>📝 About Us</h2>
+    <p>We provide quality coaching for classes 1 to 12 in Math, Science, and English. Our focus is on <span class="highlight">clear understanding</span>, regular <span class="highlight">practice</span>, and individual <span class="highlight">attention</span> to help students excel academically. Join us for a friendly, supportive environment and academic success!</p>
+  </section>
+
+  <section class="info">
+    <h2>🕒 Timings</h2>
+    <p><span class="highlight">Weekdays:</span> 5:00 PM – 9:00 PM</p>
+    <p><span class="highlight">Sunday:</span> 9:00 AM – 9:00 PM</p>
+  </section>
+
+  <section class="subjects">
+    <h2>📚 Subjects Offered</h2>
+    <div class="subject-section">
+      <div class="subject">
+        <h3>Academic Help</h3>
+        <ul>
+          <li>Assistance with school homework and assignments</li>
+          <li>Special focus on weak areas in academics</li>
+          <li>Revision and exam preparation strategies</li>
+        </ul>
+      </div>
+      <div class="subject">
+        <h3>Science & Maths</h3>
+        <ul>
+          <li>Concept-based learning with experiments</li>
+          <li>Step-by-step problem-solving in Maths</li>
+          <li>Interactive teaching with visual aids</li>
+        </ul>
+      </div>
+      <div class="subject">
+        <h3>Language Classes</h3>
+        <ul>
+          <li>English grammar & spoken skills</li>
+          <li>Tamil reading and writing improvement</li>
+          <li>Hindi classes with Sabha exam prep</li>
+        </ul>
+      </div>
+      <div class="subject">
+        <h3>Chess Classes</h3>
+        <ul>
+          <li>Learn basic and advanced moves</li>
+          <li>Improve strategic thinking and concentration</li>
+          <li>Regular internal matches and game analysis</li>
+        </ul>
+      </div>
+      <div class="subject">
+        <h3>Classical Dance</h3>
+        <ul>
+          <li>Bharatanatyam and other traditional forms</li>
+          <li>Experienced dance instructors</li>
+          <li>Performance opportunities and cultural events</li>
+        </ul>
+      </div>
+      <div class="subject">
+        <h3>Drawing / Sketching / Art & Craft</h3>
+        <ul>
+          <li>Creative workshops with skilled mentors</li>
+          <li>Activities to boost imagination and skill</li>
+          <li>Participation in art contests and exhibitions</li>
+        </ul>
+      </div>
+      <div class="subject">
+        <h3>Summer Camp (May 2025)</h3>
+        <ul>
+          <li>Fun activities & creative learning</li>
+          <li>Drawing, craft, reading habits, phonics, puzzles</li>
+          <li>Personality development & basic discipline</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="coming-soon">
+    <h2>✨ Coming Soon</h2>
+    <p>We are excited to announce <strong>SUMMER CLASSES</strong> will be starting soon! Stay tuned for more details and registration dates.</p>
+  </section>
+
+  <section class="reviews">
+    <h2>🌟 Reviews</h2>
+    <div class="review-item">
+      <p>"My daughter’s confidence in maths improved so much! Highly recommended!"</p>
+      <span>- Parent of Class 7 student</span>
+    </div>
+    <div class="review-item">
+      <p>"They make learning fun! I love going to BusyBees!"</p>
+      <span>- Class 5 student</span>
+    </div>
+    <div class="review-item">
+      <p>"Excellent teaching and personal attention to every student. Thank you!"</p>
+      <span>- Parent</span>
+    </div>
+  </section>
+
+  <section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1957.678426469002!2d77.11715279151451!3d11.08675933592331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8ff000acd1ccf%3A0x94acc218d5709004!2sBUSY%20BEES%20ACADEMY%20%F0%9F%90%9D!5e0!3m2!1sen!2sin!4v1744892498762!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="social">
+    <a href="https://wa.me/8220658361" target="_blank" class="contact-button">Contact on WhatsApp</a>
+    <a href="https://www.instagram.com/busy._.bees._.academy" target="_blank" class="contact-button instagram">Follow us on Instagram</a>
+    <a href="tel:+918220658361" class="contact-button call">Call Us</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BusyBees Tuition Center | Designed with 💛 for student success</p>
+  </footer>
+</body>
+</html>
